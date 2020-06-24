@@ -1,0 +1,55 @@
+html, body {
+  font-family: serif;
+}
+
+body {
+  margin: 20px;
+  background-color: #e4e4e4;
+}
+
+input[type="number"] {
+  width: 80px;
+}
+
+.drag-element-1{
+    width: 150px;
+    min-height: 100px;
+    border: 2px solid #000;
+    font-size: 2rem;
+    text-align: center;
+}
+.drag-element-2{
+    position: absolute;
+    left: 50%;
+    top: 55px;
+    width: 100px;
+    min-height: 100px;
+    border: 2px dotted rgb(155, 34, 192);
+    border-radius: 4rem;
+    font-size: 1.8rem;
+    line-height: 3.2;
+    text-align: center;
+}
+.drag-element-3{
+    position: absolute;
+    right: 15px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.drag-active{
+    border: 2px solid coral;
+}
+.drop-element{
+    width: 300px;
+    min-height: 200px;
+    margin-top: 50px;
+    border: 2px solid gray;
+    font-size: 2rem;
+    text-align: center;
+}
+.drop-active{
+    box-shadow: inset 0px 0px 10px 0px #000;
+    border: 2px solid #4fd94f
+}
+
