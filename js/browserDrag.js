@@ -5,7 +5,6 @@ const dragElement2 = document.querySelector('.drag-element-2');
 const dragElement3 = document.querySelector('.drag-element-3');
 const dropElement = document.querySelector('.drop-element');
 
-
 makeElementDraggable(dragElement1, 'drag-active'); // Сделали 1 элемент Drag
 makeElementDraggable(dragElement2, 'drag-active'); // Сделали 2 элемент Drag
 makeElementDraggable(dragElement3); // Сделали 3 элемент Drag
@@ -13,7 +12,6 @@ makeElementDraggable(dragElement3); // Сделали 3 элемент Drag
 // Вторым параметром принимает строку, название CSS класса который следует применять когда элемент захвачен
 function makeElementDraggable(dragElement, classStyle) {
     const namePrototypeDragElement = dragElement.__proto__.__proto__.constructor.name;
-
     try {
         // Проверяем по цепочке прототипов, является ли переданный аргумент экземпляром конструктора HTMLElement, то есть HTML узлом
         // Если это не HTML узел, тогда бросаем ошибку в консоль
@@ -34,8 +32,8 @@ function makeElementDraggable(dragElement, classStyle) {
             const offsetY = e.offsetY;
 
             // Drag элемент перемещается
-            this.addEventListener('drag', function(e) {
-                
+            this.addEventListener('drag', function (e) {
+
             });
 
             // Drag элемент завершил перемещение
@@ -56,7 +54,6 @@ function makeElementDraggable(dragElement, classStyle) {
         });
 
     } catch (error) {
-        console.log('catch');
         console.error(`TypeError: ${error.message}`);
     }
 }
@@ -67,7 +64,6 @@ makeElementReceiving(dropElement, 'drop-active');
 
 function makeElementReceiving(receivingElement, classStyle) {
     const namePrototypeDragElement = receivingElement.__proto__.__proto__.constructor.name;
-
     try {
         // Проверяем по цепочке прототипов, является ли переданный аргумент экземпляром конструктора HTMLElement, то есть HTML узлом
         // Если это не HTML узел, тогда бросаем ошибку в консоль
@@ -102,8 +98,6 @@ function makeElementReceiving(receivingElement, classStyle) {
             });
         });
     } catch (error) {
-        console.log('catch');
         console.error(`TypeError: ${error.message}`);
     }
 }
-
